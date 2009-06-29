@@ -1,0 +1,9 @@
+=render :partial => 'stat', :locals => {:stat => @item}
+-form_for(:calculator, :url => {:controller => 'items', :action => 'calc_basic', :id => @item.id}, :id => 'calc_options', :builder => LabelFormBuilder) do |f|
+  =f.select 'Which stat do you want to perfect?', 'stat', stat_choices
+  =render :partial => 'inprogress', :locals => {:f => f}
+  =submit_tag 'Calculate!'
+%p
+  %a#calc_progress Calculate the ideal stats of an in-progress item
+%p
+  =link_to('Show Advanced Calculator', {:controller => 'items', :action => 'show_advanced', :id => @item.id})

@@ -1,0 +1,8 @@
+%ul#item_menu
+  -@items.each do |item|
+    %li= link_to h(item.name), item_path(item)
+-form_tag('items/search') do
+  %label
+    Or, search for the name of the item you want:
+    %input{ :type => 'text', :name => 'name' }
+  %input{ :type => 'submit', :value => 'Search!' }

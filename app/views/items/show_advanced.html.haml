@@ -1,0 +1,24 @@
+-form_for :calculator_presenter, :url => {:action => 'calc_advanced', :id => @item.id }, :builder => LabelFormBuilder do |f|
+  =render :partial => 'stat', :locals => {:stat => @item}
+  =f.select "What is the item's rarity?", 'rarity', rarity_options_helper, {}, :id => 'rarity'
+  =f.radio_button 'No bosses killed', 'bosses_macro', 'none', :id => 'killnone'
+  =f.radio_button 'All bosses single killed', 'bosses_macro', 'single', :id => 'killsingle'
+  =f.radio_button 'All bosses double killed', 'bosses_macro', 'double', :id => 'killdouble'
+  =f.radio_button 'Custom boss killed', 'bosses_macro', 'custom', :id => 'killcustom'
+  #bosses
+    -1.upto(10) do |i|
+      =f.select bosses_label_helper(i), "bosses][", bosses_options_helper, {}, :id => "boss#{i*10}", :label_id => "boss_label#{i}"
+  -1.upto(3) do |i|
+    -field_set_tag "#{ordinal_text(i).capitalize} Bill Information", :id => "bill#{i}" do
+      =f.select 'What type of bill was passed?', "bill][][type", bill_type_helper, :id => "bill_type_#{i}"
+      =f.select "Which stat was the bill for?", "bill][][stat", bill_stat_helper, :id => "bill_stat_#{i}" 
+      =f.select "What floor was the bill passed on?", "bill][][floor", bill_floor_helper, :id => "bill_floor_#{i}" 
+  -stats.each do |stat|
+    -1.upto(10) do |i|
+      =f.hidden_field "specialists][#{stat}][", :id => "floor#{i*10}#{stat}"
+    -1.upto(10) do |i|
+      =f.hidden_field "specialists][#{stat}][", :id => "floor#{i*10}#{stat}_second"
+  =render :partial => 'inprogress', :locals => {:f => f}
+  %p
+    =link_to 'Add Specialists', '#specialist_wizard', :id => 'add_specialists'
+  =submit_tag 'Calculate!'

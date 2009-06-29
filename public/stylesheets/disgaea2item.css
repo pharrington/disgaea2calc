@@ -1,0 +1,165 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 1em;
+}
+
+body {
+	font-family: Verdana/*, helvetica/*, arial, sans-serif*/;
+	position: relative;
+	font-size: .9em;
+	top: 0px; left: 0px; z-index: 0;
+}
+
+img {
+	border-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 1em;
+}
+
+table td, table th {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(0, 0, 0);
+	margin: 0;
+	padding: .4em;
+}
+
+h1 {
+	font-size: 1.2em;
+	margin: 0 0 .5em 0;
+	text-decoration: underline;
+}
+
+h1:first-letter {
+	font-size: 2em;
+	margin-right: -0.01em;
+}
+
+h2 {
+	font-size: 1.1em;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#content {
+	position:relative;
+	width: 38em;
+	margin-top: 3em;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content_body {
+	position: relative;
+	margin-top: 1em;
+	margin-right: 2em;
+	padding-left: 2em;
+	padding-bottom: 2em;
+	z-index:1;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+form {
+	position: relative;
+	padding-bottom: .6em;
+}
+
+form input {
+	border-style: solid;
+	border-width: 1px;
+	padding: .2em;
+	font-size: .9em;
+}
+
+form input.radio {
+	border-style: none;
+}
+
+form select {
+	border-style: solid;
+	border-width: 1px;
+	padding: .1em;
+	width: 10em;
+	position: absolute;
+	right: 0px;
+	margin-right: .5em;
+}
+
+form .submit, form label {
+	display: block;
+}
+
+form label {
+	margin-bottom: .5em;
+	padding-right: 1em;
+}
+
+form label.inprogress input {
+	position: absolute;
+	right: 0px;
+	margin-right: .5em;
+}
+
+form fieldset {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+ul#item_menu {
+	margin-bottom: 1em;
+}
+
+form#calc_options {
+	width: 33em;
+}
+
+form#calc_options label.boss {
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+.raise {
+	position: relative;
+	z-index: 2;
+}
+
+#specialist_wizard {
+	display: block;
+	position: absolute;
+	z-index:3;
+	top: 1em;
+	left: 20%;
+	background: rgb(245, 245, 245);
+	width: 25em;
+	padding: 1em 1em 1em 1em;
+	border-style: groove;
+	border-width: 2px;
+}
+
+.wizard_finish {
+	float: left;
+}
+
+.wizard_next {
+	float: right;
+}
+
+.wizard_controls {
+	clear: both;
+	margin-top:1em;
+}

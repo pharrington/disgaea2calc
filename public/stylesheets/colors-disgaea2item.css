@@ -1,0 +1,48 @@
+body {
+	background-color: rgb(250, 250, 245);
+}
+
+#content {
+	background: rgb(240, 215, 225) url(../images/portrait.jpg) top right no-repeat;
+}
+
+a {
+	color: rgb(130, 25, 0);
+}
+
+form input {
+	background: #fff;
+}
+
+form input.radio {
+	background: none;
+}
+
+.mainheading {
+	background: url(../images/roundtl.gif) no-repeat top left;
+	height: 80px;
+}	
+
+.mainheading h1 {
+	padding: 1.6em 0 0 1.7em;
+	background: url(../images/roundtr.gif) no-repeat top right;
+	height: 100%;
+	color: #000;
+}
+
+.mainheading h1:first-letter {
+	color: rgb(200, 190, 35);
+}
+
+.content_body {
+	background: url(../images/roundbl.gif) no-repeat bottom left;
+}
+
+.content_bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height:80px;
+	background: url(../images/roundbr.gif) no-repeat bottom right;
+	z-index: 0;
+}

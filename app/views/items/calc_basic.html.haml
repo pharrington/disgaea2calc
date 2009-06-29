@@ -1,0 +1,7 @@
+-if @stat == 'ALL' then
+  -%w[hp sp atk def int res hit spd].each do |stat|
+    %h2= "Perfected stats for #{stat.upcase}:"
+    =render :partial => 'stat', :locals => {:stat => @calculated[stat]}
+-else
+  %h2= "Perfected stats for #{@stat}:"
+  =render :partial => 'stat', :locals => {:stat => @calculated}
